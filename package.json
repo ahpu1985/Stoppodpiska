@@ -5,10 +5,10 @@
   "type": "commonjs",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "start": "node src/index.js",
+    "start": "prisma migrate deploy && node src/index.js",
     "prisma:migrate": "prisma migrate dev",
     "prisma:generate": "prisma generate",
-    "postinstall": "prisma migrate deploy",
+    "postinstall": "prisma  generate",
   },
   "dependencies": {
     "@prisma/client": "^5.16.0",
