@@ -7,6 +7,8 @@ const authRoutes = require('./routes/auth');
 const subscriptionRoutes = require('./routes/subscriptions');
 
 const app = express();
+app.set('trust proxy',1);
+// "fix: trust proxy for railway" 
 
 app.use(helmet());
 app.use(cors());
